@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bokregister</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bokregister</h1>
+    </header>
+    
+    <main>
+        <!-- Formulär för att lägga till en ny bok -->
+        <section id="addBook">
+            <h2>Lägg till ny bok</h2>
+            <form id="bookForm">
+                <label for="title">Titel:</label>
+                <input type="text" id="title" name="title" required>
+                
+                <label for="author">Författare:</label>
+                <input type="text" id="author" name="author" required>
+
+                <label for="isbn">ISBN:</label>
+                <input type="text" id="isbn" name="isbn" required>
+
+                <button type="submit">Lägg till bok</button>
+            </form>
+        </section>
+
+        <!-- Sökfält för att hitta en specifik bok -->
+        <section id="searchBook">
+            <h2>Sök en specifik bok</h2>
+            <input type="text" id="searchInput" placeholder="Sök efter titel eller ISBN">
+            <button id="searchButton">Sök bok</button>
+            <div id="searchResult"></div>
+        </section>
+
+        <!-- Tabell som visar alla böcker -->
+        <section id="bookList">
+            <h2>Alla böcker</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Titel</th>
+                        <th>Författare</th>
+                        <th>ISBN</th>
+                    </tr>
+                </thead>
+                <tbody id="booksTable">
+                    <!-- Böcker visas här dynamiskt -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
